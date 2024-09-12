@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <section class="navbar">
+
+        <div class="navbar-col">
+            <div class="navbar-main">
+                <div class="navbar-log">
+                    <img src="/images/logo.png" alt="logo" width="100px" height="66px">
+
+                </div>
+
+
+                <div class="navbar-center" id="div-a">
+                    <p class="center-element">Anywhere</p>
+                    <p class="center-element">AnyWeek</p>
+                    <p class="center-element">Add Guest</p>
+                    <div class="search-icon">
+                        <i class="fa fa-magnifying-glass "></i>
+
+                    </div>
+                   </div>
+
+
+                <!------------------Navbar center B which repalced on scroll ----------------------------- -->
+
+                   <div class="navbar-center-b" id="div-b">
+
+                    <div class="navbar-center-b-top">
+
+                        <p onclick="toggleStays()" class="toggleButton">Stays</p>
+                        <p onclick="toggleExperinces()" class="toggleButton">Experience</p>
+
+                    </div>
+                 </div>
+
+
+                <!------------------Right side of Navbar ----------------------------- -->
+                 <div class="navbar-right">
+                    <div class="navbar-right-text">
+                        <p>Airbnb Your home</p>
+                        <!--Add some border and then  -->
+                    </div>
+                    <div>
+                        <!-- Add icon for web  and add listner for on click  -->
+                        <i class="fa fa-light fa-globe" onclick="toggleWebModel()"></i>
+
+                    </div>
+                    <div class="navbar-right-icon">
+                        <!-- icon for == -->
+                        <i class="fas fa-bars icon-colors" onclick="toggleMenu()"></i>
+                        <i class="fas fa-user icon-colors"></i>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+            <!------------ Navbar center  bottom need to display on scroll ----------------->
+            <div class="navbar-center-bottom" id="div-c">
+                
+                <div class="navbar-center-item">
+                    <p class="center-element">Where</p>
+                    <input class="center-element-input" style="border: 0px;" type="text"
+                            placeholder="Search Destination"></input>
+
+
+                </div>
+
+                    <div class="navbar-center-item">
+                        <p class="center-element">Check In</p>
+                        <input class="center-element-input" style="border: 0px;" type="text"
+                            placeholder="Add dates"></input>
+
+                    </div>
+
+                    <div class="navbar-center-item">
+                        <p class="center-element">Check Out</p>
+                        <input class="center-element-input" style="border: 0px;" type="text"
+                            placeholder="Add Dates"></input>
+
+
+                    </div>
+
+                <div class="navbar-center-b-end">
+
+                    <div class="navbar-center-item">
+                        <p class="center-element">Who</p>
+                        <input class="center-element-input" style="border: 0px;" type="text"
+                            placeholder="Add Dates"></input>
+
+
+                    </div>
+
+                    <div class="search-icon">
+                        <p class="search-text">Search</p>
+                        <i class="fa fa-magnifying-glass icoon-search"></i>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+            <!------------ Responsive Navbar displayed for screen smaller than 720px ----------------->
+
+        <div class="responsive-navbar hidden" id="div-c">
+
+            <div class="responsive-navbar-search">
+                <i class="fa fa-magnifying-glass "></i>
+
+            </div>
+
+
+            <div class="navbar-center-item">
+                <p class="responsive-center-top-text">Where to?</p>
+                <div class="responsive-center-items">
+                    <p >Any Where</p>
+                    <p >Any Week</p>
+                    <p >Add guests</p>
+                </div>
+            </div>   
+            
+        </div>
+    
+
+
+        <!----------------------Scroll container for icons ---------------------->
+        <div id="slidingPlaceholder"></div>
+        <!--   ICON SECTION  -->
+
+        <div class="icon-section">
+            <!-- Left scroll button -->
+            <div class="scroll-button" id="scroll-left">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+
+
+            <div class="scroll-content">
+                <div class="icon-container" id="icon-container">
+                    <div class="icon-item">
+                        <i class="fas fa-bed gray-icon"></i>
+                        <p>Room</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-mountain gray-icon"></i>
+                        <p>Amazing Views</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-bed gray-icon"></i>
+                        <p>Bed</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-bed gray-icon"></i>
+                        <p>Another Bed</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-campground gray-icon"></i>
+                        <p>Cabins</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-campground gray-icon"></i>
+                        <p>More Cabins</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-building gray-icon"></i>
+                        <p>Mansions</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-water gray-icon"></i>
+                        <p>Lakefront</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-utensils gray-icon"></i>
+                        <p>Breakfast</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-swimmer gray-icon"></i>
+                        <p>Amazing Pools</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-tractor gray-icon"></i>
+                        <p>Farms</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-umbrella-beach gray-icon"></i>
+                        <p>Beach</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-hiking gray-icon"></i>
+                        <p>Caves</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-chess-rook gray-icon"></i>
+                        <p>Castles</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-umbrella-beach gray-icon"></i>
+                        <p>Beach</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-tree gray-icon"></i>
+                        <p>Countryside</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-home gray-icon"></i>
+                        <p>A-frames</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-star gray-icon"></i>
+                        <p>OMG</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-globe gray-icon"></i>
+                        <p>Earth Homes</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-umbrella-beach gray-icon"></i>
+                        <p>Tropical</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-umbrella-beach gray-icon"></i>
+                        <p>Beach Again</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-mountain gray-icon"></i>
+                        <p>Top of the World</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-tree gray-icon"></i>
+                        <p>Tree House</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-anchor gray-icon"></i>
+                        <p>Houseboats</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-golf-ball gray-icon"></i>
+                        <p>Golfing</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+                <!-- Right scroll Button -->
+            <div class="scroll-button" id="scroll-right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <div>
+        <div id="menu-card" class="menu-card">
+            <a href="#" class="menu-item">Login</a>
+            <a href="#" class="menu-item">Signup</a>
+            <hr>
+            <a href="#" class="menu-item">Login</a>
+            <a href="#" class="menu-item">Login</a>
+            <a href="#" class="menu-item">Login</a>
+
+        </div>
+
+    </div>
+
+                        <!-- to add overlay effect -->
+                    <div class="overlay"></div>
+
+                        <!-- Dummy Model to be displayed on pression web icon -->
+        
+                        <div id="web-model" class="web-model">
+                            <a href="#" class="menu-item">Login</a>
+                            <a href="#" class="menu-item">Signup</a>
+                            <hr>
+                            <a href="#" class="menu-item">Login</a>
+                            <a href="#" class="menu-item">Login</a>
+                            <a href="#" class="menu-item">Login</a>
+                            <div class="cross-icon" id="cross-icon">
+                                <i class="fa-solid fa-x" onclick="closeWebModel()"></i>
+        
+                            </div>
+                        </div>
+
+
+
+    <!-- Products Section -->
+
+    <section class="product-section">
+
+        <div class="product-container">
+            <div class="product">
+                <img src="images/101.png">
+
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+                </div>
+
+                
+            </div>
+            
+
+                
+            
+
+            <div class="product">
+                <img src="images/103.png">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/104.png">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+            </div>
+
+
+            <div class="product">
+                <img src="images/105.png">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+            </div>
+
+
+            <div class="product">
+                <img src="images/105.png">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/106.png">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+            <div class="product">
+                <img src="images/107.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="images/108.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+            </div>
+
+
+            <div class="product">
+                <img src="images/109.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="product">
+                <img src="images/111.jfif">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+            <div class="product">
+                <img src="images/112.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+            <div class="product">
+                <img src="images/113.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+
+            </div>
+            <div class="product">
+                <img src="images/114.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+            <div class="product">
+                <img src="images/115.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+
+            </div>
+
+            <div class="product">
+                <img src="images/116.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+            <div class="product">
+                <img src="images/117.jfif">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+            <div class="product">
+                <img src="images/118.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+
+            </div>
+
+            <div class="product">
+                <img src="images/118.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+            <div class="product">
+                <img src="images/119.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+            <div class="product">
+                <img src="images/120.jpeg">
+
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+            <div class="product">
+                <img src="images/106.png">
+                <div class="product-content">
+                    <p class="product-title">title</p>
+                    <p class="product-sub">sub title</p>
+                    <p class="product-status">Sold out</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- display same as like icons section follow same design of icon section -->
+
+
+
+    <!-- display of data given in grid form only 4 lines should be visible when we click on Show more button 
+         it will display all of the data -->
+
+    <!-- <section>
+
+    </section> -->
+
+
+
+    <footer class="footer">
+        <div class="footer-column">
+            <p>Support</p>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">AirCover</a></li>
+                <li><a href="#">Anti-discrimination</a></li>
+                <li><a href="#">Disability support</a></li>
+                <li><a href="#">Cancellation options</a></li>
+                <li><a href="#">Report neighborhood concern</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Hosting</p>
+            <ul>
+                <li class="list-item"><a href="#">Airbnb your home</a></li>
+                <li class="list-item"><a href="#">AirCover for Hosts</a></li>
+                <li class="list-item"><a href="#">Hosting resources</a></li>
+                <li class="list-item"><a href="#">Community forum</a></li>
+                <li class="list-item"><a href="#">Hosting responsibly</a></li>
+                <li class="list-item"><a href="#">Airbnb-friendly apartments</a></li>
+                <li class="list-item"><a href="#">Join a free Hosting class</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <p>Airbnb</p>
+            <ul>
+                <li class="list-item"><a href="#">Newsroom</a></li>
+                <li class="list-item"><a href="#">New features</a></li>
+                <li class="list-item"><a href="#">Careers</a></li>
+                <li class="list-item"><a href="#">Investors</a></li>
+                <li class="list-item"><a href="#">Gift cards</a></li>
+                <li class="list-item"><a href="#" class="list-link">Airbnb.org emergency stays</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <div class="footer-main">
+        <div class="footer-left">
+            <p class="left-item">© 2024 Airbnb, Inc</p>
+            <p class="left-item">Terms</p>
+            <p class="left-item">Privacy</p>
+            <p class="left-item">Your Privacy Choices</p>
+        </div>
+    
+        <div class="footer-right">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
